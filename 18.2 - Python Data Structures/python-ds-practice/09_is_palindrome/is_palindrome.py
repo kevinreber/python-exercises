@@ -21,8 +21,10 @@ def is_palindrome(phrase):
         >>> is_palindrome('Noon')
         True
     """
-    reverse = phrase[::-1]
+    phrase = phrase.lower().replace(' ', '')  # Remove any capitalizations or spaces
     print(f'{phrase} is ')
+
+    reverse = phrase[::-1]
 
     if phrase == reverse:
         return True
@@ -33,3 +35,5 @@ def is_palindrome(phrase):
 print(is_palindrome('tacocat'))
 print(is_palindrome('noon'))
 print(is_palindrome('robert'))
+print(is_palindrome('taco cat'))
+print(is_palindrome('Noon'))
